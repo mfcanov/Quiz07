@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+
+double dot_product(double list1[], double list2[], int num)
+{
+  double res=0;
+    for (int i=1; i<=num; i++){
+      res=res+(list1[i]*list2[i]);
+    }
+return res;
+}
+
+int main(){
+  int num;
+  double res;
+    cout << "This program calculates the dot product of the two lists provided"<<endl;
+    cout << "How many number does the list have?: ";
+    cin >> num;
+  double list1[num], list2[num];
+  for (int i=1; i<=num; i++){
+    cout << "What is the "<< i << " value of the first list?";
+    cin >> list1[i];
+  }
+  for (int i=1; i<=num; i++){
+    cout << "What is the "<< i << " value of the second list?";
+    cin >> list2[i];
+  }
+    res=dot_product(list1, list2, num);
+    cout << "The dot product of the two lists is: "<<res<<endl;
+
+  return 0;
+}
